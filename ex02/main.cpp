@@ -5,17 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 17:18:39 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/18 13:26:18 by tmoumni          ###   ########.fr       */
+/*   Created: 2023/09/18 18:12:56 by tmoumni           #+#    #+#             */
+/*   Updated: 2023/09/18 18:20:12 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
 
 int main()
 {
-    randomChump("hamra");
-    Zombie taha("TAHA");
-    taha.announce();
-    return (0);
+    std::string     str = "HI THIS IS BRAIN";
+    std::string     *stringPTR = &str;
+    std::string     &stringREF = str;
+
+    std::cout << &str << std::endl;
+    std::cout << stringPTR << std::endl;
+    std::cout << &stringREF << std::endl;
+
+    std::cout << str << std::endl;
+    std::cout << *stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
 }

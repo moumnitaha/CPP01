@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 17:18:39 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/18 13:26:18 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/18 16:04:15 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 int main()
 {
-    randomChump("hamra");
-    Zombie taha("TAHA");
-    taha.announce();
+    Zombie *zm = zombieHorde(5, "hamra");
+    for (int i = 0; i < 5; i++)
+    {
+        zm[i].announce();
+    }
+    delete  [] zm;
     return (0);
 }
