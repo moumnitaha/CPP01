@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:44:07 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/20 23:08:02 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/20 23:17:43 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Harl::Harl()
 {
-
+	std::cout << "Harl is Alive!" << std::endl;
 }
 
 Harl::~Harl()
