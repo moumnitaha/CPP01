@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:44:07 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/20 18:50:16 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/20 23:11:59 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,24 @@ void Harl::complain( std::string level )
 	for (int i = 0; i < 4; i++)
 	{
 		if (levels[i] == level)
-			(this->*complain_fun[i])();
+		{
+			switch (i)
+			{
+				case 0:
+					(this->*complain_fun[0])();
+					break;
+				case 1:
+					(this->*complain_fun[1])();
+					break;
+				case 2:
+					(this->*complain_fun[2])();
+					break;
+				case 3:
+					(this->*complain_fun[3])();
+					break;
+				default:
+					break;
+			}
+		}
 	}
 }
