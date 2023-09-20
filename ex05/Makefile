@@ -5,19 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/20 11:18:07 by tmoumni           #+#    #+#              #
-#    Updated: 2023/09/20 14:41:31 by tmoumni          ###   ########.fr        #
+#    Created: 2023/09/20 16:43:47 by tmoumni           #+#    #+#              #
+#    Updated: 2023/09/20 16:52:35 by tmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FileStream
-# HEADER = Weapon.hpp HumanA.hpp HumanB.hpp
+NAME = Harl
+HEADER = Harl.hpp
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror
 STD = -std=c++98
 
-SRC = main.cpp
+SRC = main.cpp Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

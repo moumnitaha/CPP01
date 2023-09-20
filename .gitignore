@@ -5,3 +5,6 @@ Zombie
 STR
 Weapon
 *.txt
+*.replace
+FileStream
+Harl
