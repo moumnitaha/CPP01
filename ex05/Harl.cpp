@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:44:07 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/20 17:46:19 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/20 18:36:54 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,25 @@ Harl::~Harl()
 
 void Harl::debug(void)
 {
-	std::cout << "This is a debug msg" << std::endl;
+	std::cout << "I love having extra bacon for my 7XL-double-cheese-";
+	std::cout << "triple-pickle-special-ketchup burger. I really do!" << std::endl;
 }
 
 void Harl::info(void)
 {
-	std::cout << "This is an info msg" << std::endl;
+	std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put";
+	std::cout <<  "enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
 }
 
 void Harl::warning(void)
 {
-	std::cout << "This is a warning msg" << std::endl;
+	std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming";
+	std::cout << "for years whereas you started working here since last month." << std::endl;
 }
 
 void Harl::error(void)
 {
-	std::cout << "This is an error msg" << std::endl;
+	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
 void Harl::complain( std::string level )
