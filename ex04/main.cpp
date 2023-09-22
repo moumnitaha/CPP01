@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:18:40 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/20 16:38:58 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/09/22 11:34:35 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int main(int ac, char **av)
         return (0);
     }
 
-    while (getline(ifile, line) && s1.size() && s2.size())
+    while (getline(ifile, line))
     {
         found = line.find(s1, 0);
-        while (found != std::string::npos && s1 != s2)
+        while (found != std::string::npos && s1 != s2 && s1.size() && s2.size())
         {
             tmp_line = line.substr(0, found) + s2 + line.substr(found + s1.length());
             line = tmp_line;
