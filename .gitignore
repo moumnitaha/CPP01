@@ -2,6 +2,7 @@
 *.o
 a.out
 Zombie
+ZombieH
 STR
 Weapon
 *.txt
@@ -9,3 +10,4 @@ Weapon
 FileStream
 Harl
 harlFilter
+*.jpg

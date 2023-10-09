@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 18:36:53 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/18 22:06:15 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/09 14:33:27 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Weapon
         Weapon(std::string type);
         Weapon();
         ~Weapon();
-        std::string const getType(void);
+        std::string const & getType(void);
         void    setType(std::string type); 
 };
 #endif

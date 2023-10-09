@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:18:40 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/22 11:34:35 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/09 14:45:39 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@
 int main(int ac, char **av)
 {
     if (ac != 4)
+    {
+        std::cout << "Usage: ./FileStream filename s1 s2" << std::endl;
         return (0);
+    }
     std::string file = av[1];
     std::string s1 = av[2];
     std::string s2 = av[3];
