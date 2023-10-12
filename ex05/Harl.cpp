@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:44:07 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/20 23:17:36 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/12 14:44:19 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,30 +47,31 @@ void Harl::error(void)
 
 void Harl::complain( std::string level )
 {
-	void		(Harl::*complain_fun[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	int i = 0;
+	void (Harl::*complain_fun[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-	for (int i = 0; i < 4; i++)
+	for (i = 0; i < 4; i++)
 	{
 		if (levels[i] == level)
-		{
-			switch (i)
-			{
-				case 0:
-					(this->*complain_fun[0])();
-					break;
-				case 1:
-					(this->*complain_fun[1])();
-					break;
-				case 2:
-					(this->*complain_fun[2])();
-					break;
-				case 3:
-					(this->*complain_fun[3])();
-					break;
-				default:
-					break;
-			}
-		}
+			break;
+	}
+	switch (i)
+	{
+		case 0:
+			(this->*complain_fun[0])();
+			break;
+		case 1:
+			(this->*complain_fun[1])();
+			break;
+		case 2:
+			(this->*complain_fun[2])();
+			break;
+		case 3:
+			(this->*complain_fun[3])();
+			break;
+		default:
+			std::cout << "Error: level: [" << level << "] not found" << std::endl;
+			break;
 	}
 }

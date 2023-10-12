@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:18:40 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/09 14:45:39 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/12 15:28:57 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,26 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+
+void replace(std::ifstream & ifile,std::ofstream & ofile, std::string & s1, std::string & s2)
+{
+    size_t found;
+    std::string tmp_line;
+    std::string line;
+
+    while (getline(ifile, line))
+    {
+        found = line.find(s1, 0);
+        while (found != std::string::npos && s1 != s2 && s1.size() && s2.size())
+        {
+            tmp_line = line.substr(0, found) + s2 + line.substr(found + s1.length());
+            line = tmp_line;
+            found = line.find(s1, found);
+        }
+        std::cout << line << std::endl;
+        ofile << line << std::endl;
+    }
+}
 
 int main(int ac, char **av)
 {
@@ -25,10 +45,7 @@ int main(int ac, char **av)
     std::string file = av[1];
     std::string s1 = av[2];
     std::string s2 = av[3];
-    std::string line;
-    std::string tmp_line;
     file += ".replace";
-    size_t found;
 
     std::ifstream   ifile(av[1]);
     if (!ifile.is_open())
@@ -44,18 +61,8 @@ int main(int ac, char **av)
         return (0);
     }
 
-    while (getline(ifile, line))
-    {
-        found = line.find(s1, 0);
-        while (found != std::string::npos && s1 != s2 && s1.size() && s2.size())
-        {
-            tmp_line = line.substr(0, found) + s2 + line.substr(found + s1.length());
-            line = tmp_line;
-            found = line.find(av[2], found);
-        }
-        std::cout << line << std::endl;
-        ofile << line << std::endl;
-    }
+    replace(ifile,ofile, s1, s2);
+
     ifile.close();
     ofile.close();
     return (0);

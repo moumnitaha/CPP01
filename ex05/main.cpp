@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:42:57 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/09/20 18:51:39 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/12 14:43:50 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void)
 	std::cout << "--------------" << std::endl;
 	me->complain("ERROR");
 	std::cout << "--------------" << std::endl;
-	me->complain("LEVEL UNKOWN");
+	me->complain("UNKOWN LEVEL");
 	std::cout << "--------------" << std::endl;
 	delete me;
 	return (0);

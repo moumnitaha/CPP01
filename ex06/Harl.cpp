@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:44:07 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/09 15:02:54 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/12 15:47:35 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,35 +54,35 @@ void Harl::complain( std::string level )
 	void		(Harl::*complain_fun[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int i;
+	int j = 0;
 	for (i = 0; i < 4; i++)
 	{
 		if (levels[i] == level)
-		{
-			while(i < 4)
-			{
-				switch (i)
-				{
-					case 0:
-						(this->*complain_fun[0])();
-						break;
-					case 1:
-						(this->*complain_fun[1])();
-						break;
-					case 2:
-						(this->*complain_fun[2])();
-						break;
-					case 3:
-						(this->*complain_fun[3])();
-						break;
-					default:
-						break;
-				}
-				std::cout << std::endl;
-				i++;
-			}
-		}
+			break;
 	}
-	if (i == 4)
+	j = i;
+	while(i < 4)
+	{
+		switch (i)
+		{
+			case 0:
+				(this->*complain_fun[0])();
+				break;
+			case 1:
+				(this->*complain_fun[1])();
+				break;
+			case 2:
+				(this->*complain_fun[2])();
+				break;
+			case 3:
+				(this->*complain_fun[3])();
+				break;
+			default:
+				break;
+		}
+		std::cout << std::endl;
+		i++;
+	}
+	if (j == 4)
 		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-
 }
