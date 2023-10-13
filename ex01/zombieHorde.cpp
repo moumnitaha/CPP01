@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:24:18 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/12 10:41:53 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/13 16:59:46 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ Zombie*    zombieHorde( int N, std::string name )
         exit (0);
     }
     Zombie* horde = new Zombie[N];
+    if (!horde) {
+        std::cout << "Error: Memory allocation failed" << std::endl;
+        exit (0);
+    }
     for (int i = 0; i < N; i++)
     {
         horde[i].set_name(name);
