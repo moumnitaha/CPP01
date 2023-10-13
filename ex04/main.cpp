@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:18:40 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/13 17:02:09 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/13 17:34:01 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ void replace(std::ifstream & ifile,std::ofstream & ofile, std::string & s1, std:
         found = line.find(s1, 0);
         while (found != std::string::npos && s1 != s2 && s1.size() && s2.size())
         {
-            tmp_line = line.substr(0, found) + s2 + line.substr(found + s1.length());
-            line = tmp_line;
+            line = line.substr(0, found) + s2 + line.substr(found + s1.length());
             found = line.find(s1, found + s2.length());
         }
         ofile << line << std::endl;
