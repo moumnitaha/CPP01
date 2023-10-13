@@ -6,11 +6,11 @@
 #    By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 16:43:47 by tmoumni           #+#    #+#              #
-#    Updated: 2023/10/09 14:55:37 by tmoumni          ###   ########.fr        #
+#    Updated: 2023/10/13 15:00:03 by tmoumni          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = HarlFilter
+NAME = harlFilter
 HEADER = Harl.hpp
 
 CC = c++

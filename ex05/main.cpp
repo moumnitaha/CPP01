@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:42:57 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/12 14:43:50 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/13 14:54:48 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,16 @@
 
 int main(void)
 {
-	Harl *me = new Harl();
-	std::cout << "--------------" << std::endl;
-	me->complain("DEBUG");
-	std::cout << "--------------" << std::endl;
-	me->complain("INFO");
-	std::cout << "--------------" << std::endl;
-	me->complain("WARNING");
-	std::cout << "--------------" << std::endl;
-	me->complain("ERROR");
-	std::cout << "--------------" << std::endl;
-	me->complain("UNKOWN LEVEL");
-	std::cout << "--------------" << std::endl;
-	delete me;
+	Harl *harl = new Harl();
+	harl->complain("DEBUG");
+	std::cout << std::endl;
+	harl->complain("INFO");
+	std::cout << std::endl;
+	harl->complain("WARNING");
+	std::cout << std::endl;
+	harl->complain("ERROR");
+	std::cout << std::endl;
+	harl->complain("UNKOWN LEVEL");
+	delete harl;
 	return (0);
 }

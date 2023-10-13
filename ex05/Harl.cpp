@@ -6,7 +6,7 @@
 /*   By: tmoumni <tmoumni@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:44:07 by tmoumni           #+#    #+#             */
-/*   Updated: 2023/10/12 14:44:19 by tmoumni          ###   ########.fr       */
+/*   Updated: 2023/10/13 15:24:21 by tmoumni          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 Harl::Harl()
 {
-	std::cout << "Harl is Alive!" << std::endl;
+	// std::cout << "Harl is Alive!" << std::endl;
 }
 
 Harl::~Harl()
 {
-	std::cout << "Harl is dead!" << std::endl;
+	// std::cout << "Harl is dead!" << std::endl;
 }
 
 void Harl::debug(void)
@@ -71,7 +71,7 @@ void Harl::complain( std::string level )
 			(this->*complain_fun[3])();
 			break;
 		default:
-			std::cout << "Error: level: [" << level << "] not found" << std::endl;
+			std::cout << "Error: level [" << level << "] not found" << std::endl;
 			break;
 	}
 }
